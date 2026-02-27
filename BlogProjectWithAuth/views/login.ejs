@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+
+    <div class="form-container" style="max-width: 450px; margin-top: 5rem;">
+        <h1 class="page-title" style="text-align: center; margin-bottom: 2rem;">Welcome Back</h1>
+
+        <% if (error) { %>
+            <div
+                style="background-color: #FEE2E2; color: #DC2626; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1.5rem; text-align: center; font-weight: 500;">
+                <%= error %>
+            </div>
+            <% } %>
+
+                <form action="/login" method="POST">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="••••••••">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.85rem;">Log
+                            In</button>
+                    </div>
+                </form>
+
+                <p style="text-align: center; margin-top: 2rem; color: #6B7280;">
+                    Don't have an account? <a href="/signup"
+                        style="color: var(--primary); font-weight: 600; text-decoration: none;">Sign up here</a>
+                </p>
+    </div>
+
+    <%- include('partials/footer') %>
