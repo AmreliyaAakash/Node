@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Student</title>
+</head>
+<body>
+
+<h2>Edit Student</h2>
+
+<form action="/editData" method="post">
+  <input type="hidden" name="id" value="<%= editValue.id %>">
+
+  <input type="text" name="name" value="<%= editValue.name %>" required>
+
+  <button type="submit" style="padding: 5px; background: #000; color: white; border-radius: 8px;">Update</button>
+</form>
+
+<br>
+<a href="/" style="text-decoration: none;">Go Back</a>
+</body>
+</html>
